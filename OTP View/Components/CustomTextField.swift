@@ -11,6 +11,8 @@ import UIKit
 
 final class CustomTextField: UITextField {
     
+    // MARK: Initializers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -19,10 +21,13 @@ final class CustomTextField: UITextField {
         super.init(coder: coder)
     }
     
+    // MARK: Functions
+    
     @objc private func doneAction() {
         resignFirstResponder()
     }
     
+    // Add button don to Keyboard
     func addDoneButton() {
         
         let toolBar = UIToolbar()

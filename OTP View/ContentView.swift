@@ -7,14 +7,13 @@
 
 import SwiftUI
 
+// MARK: - Principal View
+
 struct ContentView: View {
     
     var body: some View {
         
-        VStack {
-            OTPView()
-        }
-        .padding()
+        OTPView()
     }
 }
 

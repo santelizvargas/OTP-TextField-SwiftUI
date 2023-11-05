@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-@main
-struct OTP_ViewApp: App {
+@main struct OTP_ViewApp: App {
+    
     var body: some Scene {
+        
         WindowGroup {
+            
             ContentView()
         }
     }

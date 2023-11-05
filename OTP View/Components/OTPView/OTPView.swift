@@ -72,7 +72,7 @@ extension OTPView {
                 .font(.system(size: 20).bold())
             
             RoundedRectangle(cornerRadius: 5)
-                .foregroundColor(.purple)
+                .foregroundColor(.black)
                 .frame(width: 30, height: 3)
         }
         .padding(.horizontal, 5)
