@@ -22,28 +22,30 @@ struct OTPView: View {
     
     var body: some View {
         
-        HStack {
-            ForEach(0..<maxItems, id: \.self) { index in
-                OTPItem(index)
+        VStack {
+            HStack {
+                ForEach(0..<maxItems, id: \.self) { index in
+                    OTPItem(index)
+                }
             }
-        }
-        .background (
-            OTPTextField(text: $textCode.limit(maxItems),
-                         isFocused: $isFocused)
-            .opacity(0.001)
-        )
-        .onTapGesture {
-            isFocused = true
-        }
-        
-        Button { } label: {
-            Text("Validate")
-                .foregroundColor(Color.white)
-                .frame(width: 200, height: 50)
-                .background(textCode.count >= maxItems ? Color.blue : Color.gray)
-                .cornerRadius(10)
-                .padding()
+            .background (
+                OTPTextField(text: $textCode.limit(maxItems),
+                             isFocused: $isFocused)
+                .opacity(0.001)
+            )
+            .onTapGesture {
+                isFocused = true
+            }
             
+            Button { } label: {
+                Text("Validate")
+                    .foregroundColor(Color.white)
+                    .frame(width: 200, height: 50)
+                    .background(textCode.count >= maxItems ? Color.blue : Color.gray)
+                    .cornerRadius(10)
+                    .padding()
+                
+            }
         }
     }
 }
@@ -77,6 +79,7 @@ extension OTPView {
         }
         .padding(.horizontal, 5)
     }
+    
 }
 
 #Preview {
